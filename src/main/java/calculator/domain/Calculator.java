@@ -4,6 +4,10 @@ public class Calculator {
 
     private final SplitNumber splitNumber;
 
+    public Calculator(SplitNumber splitNumber) {
+        this.splitNumber = splitNumber;
+    }
+
     public int add(String stringInputs) {
         int[] splitNum = splitNumber.splitNum(stringInputs);
         int sum = 0;
