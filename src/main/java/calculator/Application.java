@@ -10,12 +10,6 @@ import java.io.IOException;
 
 public class Application {
 
-    private final CalculatorController controller;
-
-    public Application(CalculatorController controller) {
-        this.controller = controller;
-    }
-
     public static void main(String[] args) throws IOException {
         // TODO: 프로그램 구현
         SeparatorGenerator separatorGenerator = new SeparatorGenerator();
@@ -24,7 +18,7 @@ public class Application {
 
         InputView inputView = new InputView();
         ResultView resultView = new ResultView();
-        
+
         CalculatorController controller = new CalculatorController(inputView, resultView, calculator);
 
         controller.runCalculator();
