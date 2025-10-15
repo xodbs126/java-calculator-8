@@ -3,11 +3,11 @@ package calculator.domain;
 import calculator.dto.SplitStringDto;
 import java.util.Arrays;
 
-public class SplitNumber {
+public class NumberSeparator {
 
     private final SeparatorGenerator separatorGenerator;
 
-    public SplitNumber(SeparatorGenerator separatorGenerator) {
+    public NumberSeparator(SeparatorGenerator separatorGenerator) {
         this.separatorGenerator = separatorGenerator;
     }
 

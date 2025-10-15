@@ -2,14 +2,14 @@ package calculator.domain;
 
 public class Calculator {
 
-    private final SplitNumber splitNumber;
+    private final NumberSeparator numberSeparator;
 
-    public Calculator(SplitNumber splitNumber) {
-        this.splitNumber = splitNumber;
+    public Calculator(NumberSeparator numberSeparator) {
+        this.numberSeparator = numberSeparator;
     }
 
     public int add(String stringInputs) {
-        int[] splitNum = splitNumber.splitNum(stringInputs);
+        int[] splitNum = numberSeparator.splitNum(stringInputs);
         int sum = 0;
 
         for (int num : splitNum) {
