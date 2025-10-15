@@ -10,7 +10,7 @@ public class SeparatorGenerator {
     private static final String DEFAULT_SEPARATOR = "[,:]";
 
     public SplitStringDto separateString(String input) {
-        if (input == null || input.isBlank()) {
+        if (input.equals("\"\"")) {
             return new SplitStringDto(DEFAULT_SEPARATOR, "");
         }
 
