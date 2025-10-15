@@ -25,9 +25,34 @@ class ApplicationTest extends NsTest {
     }
 
     @Test
-    void 기본_구분자_사용() {
+    void 빈_문자열_입력() {
+        assertSimpleTest(() -> {
+            run("\n");
+            assertThat(output()).contains("결과 : 0");
+        });
+    }
+
+    @Test
+    void 한개의_숫자_입력() {
+        assertSimpleTest(() -> {
+            run("1");
+            assertThat(output()).contains("결과 : 1");
+        });
+    }
+
+    @Test
+    void 기본_구분자_쉼표_사용() {
         assertSimpleTest(() -> {
             run("1,2,3");
+            assertThat(output()).contains("결과 : 6");
+        });
+
+    }
+
+    @Test
+    void 기본_구분자_콜론_사용() {
+        assertSimpleTest(() -> {
+            run("1:2:3");
             assertThat(output()).contains("결과 : 6");
         });
 
