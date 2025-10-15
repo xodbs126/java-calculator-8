@@ -15,7 +15,7 @@ public class SplitNumber {
         String[] splitedString = splitString(inputs);
 
         return Arrays.stream(splitedString)
-                .mapToInt(Integer::parseInt)
+                .mapToInt(s -> s.isEmpty() ? 0 : Integer.parseInt(s))
                 .toArray();
 
     }
