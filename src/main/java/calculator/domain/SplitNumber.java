@@ -14,10 +14,32 @@ public class SplitNumber {
     public int[] splitNum(String inputs) {
         String[] splitedString = splitString(inputs);
 
-        return Arrays.stream(splitedString)
-                .mapToInt(s -> s.isEmpty() ? 0 : Integer.parseInt(s))
-                .toArray();
+        if (inputs.isEmpty()) {
+            return new int[0];
+        }
 
+        return Arrays.stream(splitedString)
+                .mapToInt(this::parseValidNumber)
+                .toArray();
+    }
+
+    private int parseValidNumber(String splitedString) {
+        if (splitedString.isEmpty()) {
+            throw new IllegalArgumentException("연속된 구분자 입력은 허용하지 않습니다.");
+        }
+
+        try {
+            int splitedNumber = Integer.parseInt(splitedString);
+            if (splitedNumber < 0) {
+                throw new IllegalArgumentException("음수는 허용되지 않습니다: ");
+            }
+            return splitedNumber;
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException(
+                    "잘못된 입력입니다. 다음과 같이 입력하세요."
+                            + " \"\" => 0, \"1,2\" => 3, \"1,2,3\" => 6, //;\\n1;2;3 => 6 \""
+                            + " 현재 입력: " + splitedString + "\"");
+        }
     }
 
     private String[] splitString(String inputs) {
