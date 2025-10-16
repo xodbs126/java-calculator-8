@@ -82,6 +82,15 @@ class ApplicationTest extends NsTest {
 
     }
 
+    @Test
+    void 숫자_구분자_사용() {
+        assertSimpleTest(() -> {
+            run("//5\\n15253");
+            assertThat(output()).contains("결과 : 6");
+        });
+
+    }
+
 
     @Override
     public void runMain() {
