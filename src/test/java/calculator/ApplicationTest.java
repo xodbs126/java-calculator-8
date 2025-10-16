@@ -103,12 +103,9 @@ class ApplicationTest extends NsTest {
 
     @Test
     void 입력값_범위_초과() {
-        assertSimpleTest(() -> {
-            run("1,2,3000000000,3");
-            assertThat(output()).contains("결과 : 6");
-        });
-
-
+        assertSimpleTest(() ->
+                assertThatThrownBy(() -> runException("1,2,3000000000,3"))
+                        .isInstanceOf(IllegalArgumentException.class));
     }
 
 
