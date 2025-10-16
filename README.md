@@ -22,8 +22,10 @@
 - [x] 음수를 입력할 경우 `IllegalArgumentException`을 발생시킨다.
 - [x] 숫자가 아닌 값을 입력할 경우 `IllegalArgumentException`을 발생시킨다.
 - [x] 연속된 구분자를 입력할 경우 `IllegalArgumentException`을 발생시킨다.
+- [x] 사용자가 정수형 범위 밖의 숫자를 입력할 경우 `IllegalArgumentException`을 발생시킨다.
 
 ## 개선점
+
 - [ ] Separator 클래스의 추상화
     - [ ] NumberSeparator 책임 분리
     - [ ] StringSeparator 책임 분리
@@ -33,8 +35,8 @@
 - [ ] Validator 클래스 정의
     - [ ] 음수 Validator 클래스 정의
     - [ ] 구분자 Validator 클래스 정의
-- [ ] 예외 케이스 추가
-    - [ ] 구분자가 숫자인 경우
-    - [ ] 입력 값의 범위가 정수 범위를 벗어나는 경우
-    - [ ] 구분자를 한글을 입력 받았을 경우
+- [x] 예외 케이스 추가
+    - [x] 구분자가 숫자인 경우
+    - [x] 입력 값의 범위가 정수 범위를 벗어나는 경우
+    - [x] 구분자를 한글을 입력 받았을 경우
    
