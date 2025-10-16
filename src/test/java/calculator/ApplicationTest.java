@@ -91,6 +91,16 @@ class ApplicationTest extends NsTest {
 
     }
 
+    @Test
+    void 한글_구분자_사용() {
+        assertSimpleTest(() -> {
+            run("//강\\n1강2강3");
+            assertThat(output()).contains("결과 : 6");
+        });
+
+    }
+
+
 
     @Override
     public void runMain() {
