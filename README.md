@@ -26,15 +26,15 @@
 
 ## 개선점
 
-- [ ] Separator 클래스의 추상화
-    - [ ] NumberSeparator 책임 분리
-    - [ ] StringSeparator 책임 분리
+- [x] Separator 클래스의 추상화
+    - [x] NumberSeparator 책임 분리
+    - [x] StringSeparator 책임 분리
 - [ ] SeparatorGenerator 클래스의 추상화
     - [ ] CustomSeparatorGenerator 책임 분리
     - [ ] DefaultSeparatorGenerator 책임 분리
-- [ ] Validator 클래스 정의
-    - [ ] 음수 Validator 클래스 정의
-    - [ ] 구분자 Validator 클래스 정의
+- [x] Validator 클래스 정의
+    - [x] 음수 Validator 클래스 정의
+    - [x] 구분자 Validator 클래스 정의
 - [x] 예외 케이스 추가
     - [x] 구분자가 숫자인 경우
     - [x] 입력 값의 범위가 정수 범위를 벗어나는 경우
