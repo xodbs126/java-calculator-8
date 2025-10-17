@@ -1,21 +1,23 @@
 package calculator.domain;
 
+import calculator.domain.parser.NumberParser;
+
 public class Calculator {
 
-    private final NumberSeparator numberSeparator;
+    private final NumberParser numberParser;
 
-    public Calculator(NumberSeparator numberSeparator) {
-        this.numberSeparator = numberSeparator;
+    public Calculator(NumberParser numberParser) {
+        this.numberParser = numberParser;
     }
 
     public int add(String stringInputs) {
-        int[] splitNum = numberSeparator.splitNum(stringInputs);
         int sum = 0;
+        int[] numberList = numberParser.parseToInteger(stringInputs);
 
-        for (int num : splitNum) {
+        for (int num : numberList) {
             sum += num;
         }
         return sum;
-    }
 
+    }
 }
