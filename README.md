@@ -29,9 +29,9 @@
 - [x] Separator 클래스의 추상화
     - [x] NumberSeparator 책임 분리
     - [x] StringSeparator 책임 분리
-- [ ] SeparatorGenerator 클래스의 추상화
-    - [ ] CustomSeparatorGenerator 책임 분리
-    - [ ] DefaultSeparatorGenerator 책임 분리
+- [x] SeparatorGenerator 클래스의 추상화
+    - [x] CustomSeparatorGenerator 책임 분리
+    - [x] DefaultSeparatorGenerator 책임 분리
 - [x] Validator 클래스 정의
     - [x] 음수 Validator 클래스 정의
     - [x] 구분자 Validator 클래스 정의
