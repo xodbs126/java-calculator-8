@@ -9,6 +9,11 @@ public class CustomPatternSeparator implements Separator {
 
     private static final Pattern CUSTOM_SEPARATOR_PATTERN = Pattern.compile("//(.)\\\\n(.*)");
 
+    /***
+     * 사용자 정의 구분자 전략 정의 로직
+     * @param input 사용자 정의
+     * @return 구분자 separator와 구분할 문자열 targetString이 담긴 Optional<SplitStringDto>
+     */
     @Override
     public Optional<SplitStringDto> separateString(String input) {
 

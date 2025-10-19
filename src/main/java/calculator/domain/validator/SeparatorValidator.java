@@ -2,6 +2,11 @@ package calculator.domain.validator;
 
 public class SeparatorValidator implements Validator<String> {
 
+    /***
+     * 사용자 입력에 대한 분리자 유효성 검사
+     * @param separator 사용자 입력에 따른 구분자
+     * @return 구분자
+     */
     @Override
     public String isValid(String separator) {
         if (separator.isEmpty()) {

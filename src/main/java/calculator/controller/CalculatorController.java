@@ -17,6 +17,11 @@ public class CalculatorController {
         this.calculator = calculator;
     }
 
+    /***
+     * InputView를 통해 사용자의 입력에 따른
+     * Calculator 계산기 로직 실행
+     * ResultView를 통한 결과값 반환
+     */
     public void runCalculator() throws IOException {
         String stringInputs = inputView.input();
         int result = calculator.add(stringInputs);
