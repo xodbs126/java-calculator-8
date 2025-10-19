@@ -5,7 +5,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import camp.nextstep.edu.missionutils.test.NsTest;
-import java.io.IOException;
 import org.junit.jupiter.api.Test;
 
 class ApplicationTest extends NsTest {
@@ -21,7 +20,8 @@ class ApplicationTest extends NsTest {
     void 예외_테스트() {
         assertSimpleTest(() ->
                 assertThatThrownBy(() -> runException("-1,2,3"))
-                        .isInstanceOf(IllegalArgumentException.class));
+                        .isInstanceOf(IllegalArgumentException.class)
+        );
     }
 
     @Test
@@ -111,10 +111,6 @@ class ApplicationTest extends NsTest {
 
     @Override
     public void runMain() {
-        try {
-            Application.main(new String[]{});
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+        Application.main(new String[]{});
     }
 }

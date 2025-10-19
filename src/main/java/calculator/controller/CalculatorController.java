@@ -3,7 +3,6 @@ package calculator.controller;
 import calculator.domain.Calculator;
 import calculator.view.InputView;
 import calculator.view.ResultView;
-import java.io.IOException;
 
 public class CalculatorController {
 
@@ -22,7 +21,7 @@ public class CalculatorController {
      * Calculator 계산기 로직 실행
      * ResultView를 통한 결과값 반환
      */
-    public void runCalculator() throws IOException {
+    public void runCalculator() {
         String stringInputs = inputView.input();
         int result = calculator.add(stringInputs);
         resultView.printResult(result);

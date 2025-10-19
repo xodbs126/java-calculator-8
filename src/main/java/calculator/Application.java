@@ -11,12 +11,11 @@ import calculator.domain.validator.NumberRangeValidator;
 import calculator.domain.validator.SeparatorValidator;
 import calculator.view.InputView;
 import calculator.view.ResultView;
-import java.io.IOException;
 import java.util.List;
 
 public class Application {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         // TODO: 프로그램 구현
 
         List<Separator> separators = List.of(new CustomPatternSeparator(),
