@@ -8,7 +8,6 @@ import calculator.domain.separator.strategy.CustomPatternSeparator;
 import calculator.domain.separator.strategy.DefaultSeparator;
 import calculator.domain.separator.strategy.Separator;
 import calculator.domain.validator.NumberRangeValidator;
-import calculator.domain.validator.SeparatorValidator;
 import calculator.view.InputView;
 import calculator.view.ResultView;
 import java.io.IOException;
@@ -20,12 +19,11 @@ public class Application {
         // TODO: 프로그램 구현
         List<Separator> separators = List.of(new CustomPatternSeparator(), new DefaultSeparator());
 
-        SeparatorValidator separatorValidator = new SeparatorValidator();
         NumberRangeValidator numberRangeValidator = new NumberRangeValidator();
         InputView inputView = new InputView();
         ResultView resultView = new ResultView();
 
-        StringSeparator stringSeparator = new StringSeparator(separators, separatorValidator);
+        StringSeparator stringSeparator = new StringSeparator(separators);
         NumberParser numberParser = new NumberParser(numberRangeValidator, stringSeparator);
         Calculator calculator = new Calculator(numberParser);
 
