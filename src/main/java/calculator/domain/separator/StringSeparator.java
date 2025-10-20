@@ -1,7 +1,6 @@
 package calculator.domain.separator;
 
 import calculator.domain.separator.strategy.Separator;
-import calculator.domain.validator.Validator;
 import calculator.dto.SplitStringDto;
 import java.util.List;
 import java.util.Optional;
@@ -9,11 +8,9 @@ import java.util.Optional;
 public class StringSeparator {
 
     private final List<Separator> separators;
-    private final Validator<String> validator;
 
-    public StringSeparator(List<Separator> separators, Validator<String> validator) {
+    public StringSeparator(List<Separator> separators) {
         this.separators = separators;
-        this.validator = validator;
     }
 
     /***
@@ -27,7 +24,6 @@ public class StringSeparator {
         SplitStringDto separatorAndTarget = findFirstApplicableSeparator(inputs);
 
         String separator = separatorAndTarget.separator();
-        validator.isValid(separator);
         String targetString = separatorAndTarget.targetString();
         return targetString.split(separator);
     }
